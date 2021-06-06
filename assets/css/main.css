@@ -1,5 +1,8 @@
 /*GLOBAL*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    background-color: black;
+}
 html * {
     /* background-color: black; */
     color: white;
@@ -71,7 +74,76 @@ ul{
         padding-right: 13%;
     }
 }
+@media only screen and (min-width: 871px) and (max-width: 1024px){
+    .maindiv, footer{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 870px){
+    .maindiv, footer{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
 /*HEADER*/
+/******************MOBILE**************** */
+@media only screen and (max-width: 810px){
+    .mobile{
+        display: block;
+    }
+}
+@media only screen and (min-width: 811px){
+    .mobile{
+        display: none;
+    }
+}
+.menu-button-mobile{
+    background-color: black;
+    border-style: none;
+}
+.top-img-mobile{
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.navmenu-mobile{
+    padding: 20px 20px 20px 20px;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    animation-name: appear;
+    animation-duration: 0.4s;
+}
+@keyframes appear {
+    0%   {opacity: 0%;}
+    10%  {opacity: 10%;}
+    20%  {opacity: 20%;}
+    30%  {opacity: 30%;}
+    40%  {opacity: 40%;}
+    50%  {opacity: 50%;}
+    60%  {opacity: 60%;}
+    70%  {opacity: 70%;}
+    80%  {opacity: 80%;}
+    90%  {opacity: 90%;}
+    100% {opacity: 100%;}
+}
+.navmenu-mobile li{
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+}
+/******************MOBILE**************** */
+@media only screen and (max-width: 810px){
+    .fullsize{
+        display: none;
+    }
+}
 .navbar{
     display: flex;
     width: 800px;
@@ -90,7 +162,7 @@ ul{
     padding: 10px;
 }
 hr.navbar-break{
-    border-top: #707070;
+    border-top: #878787;
     margin: 0;
 }
 .dropdown {
@@ -117,7 +189,9 @@ hr.navbar-break{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.gray{
+    background-color: #171717;
+}
 
 /*FOOTER*/
 footer{
@@ -133,6 +207,36 @@ footer div{
     justify-content: space-between;
     align-items: center;
 }
+@media only screen and (min-width: 400px) and (max-width: 990px){
+    .footer-div{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+    }
+    .footer-email{
+        margin: auto;
+        text-align: center;
+    }
+    .footer-nav li{
+        font-size: 12px !important;
+        padding: 0 10px 0 10px !important;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 399px){
+    .footer-div{
+        display: block;
+        text-align: center;
+        font-size: 12px;
+    }
+    .footer-email{
+        margin: auto;
+        text-align: center;
+    }
+    .footer-nav li{
+        font-size: 10px !important;
+        padding: 0 10px 0 10px !important;
+    }
+}
 .footer-email{
     width: fit-content;
     color: white;
@@ -140,11 +244,17 @@ footer div{
 }
 .address-openinghours{
     color:white;
-    padding-left: 20px;
 }
 .footer-nav{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-nav li{
+    width: fit-content;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
 }
 .footer-nav a{
     color: #878787 !important;
@@ -152,58 +262,4 @@ footer div{
 .footer-nav a:hover{
     color: white !important;
     transition: 0.2s linear;
-}
-
-
-/*POSTER CAROUSEL*/
-.poster-carousel-group{
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.movie-poster-carousel{
-    width: 100%;
-    height: auto;
-}
-
-/*WEEK PANEL*/
-
-.week-panel{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    width: 100%;
-}
-.week-panel-square{
-    color: white;
-    margin: 10px auto;
-    height: 100px;
-    width: 100px;
-    border: 0.5px;
-    border-style: solid;
-    text-align: center;
-    padding-top: 23px;
-    padding-bottom: 23px;
-}
-.today{
-    padding-top: 35px;
-}
-
-/*SCHEDULE*/
-.schedule-group{
-    border: white;
-    border-width: 0.5px;
-    border-style: solid;
-}
-.schedule{
-    color: #fff;
-    background-color: black;
-    width: 100%;
-    text-align: center;
-}
-.schedule td{
-    width: 100px;
-    height: 40px;
 }

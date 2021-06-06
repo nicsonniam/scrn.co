@@ -1,0 +1,94 @@
+/*POSTER CAROUSEL*/
+.poster-carousel-group{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.movie-poster-carousel{
+    width: 100%;
+    height: auto;
+}
+
+/*WEEK PANEL*/
+
+.week-panel{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+.week-panel-square{
+    color: white;
+    margin: 10px auto;
+    height: 100px;
+    width: 100px;
+    border: 0.5px;
+    border-style: solid;
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+@media only screen and (min-width: 700px) and (max-width: 900px){
+    .week-panel-square{
+        height: 90px;
+        width: 90px;
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (min-width: 550px) and (max-width: 699px){
+    .week-panel-square{
+        height: 70px;
+        width: 70px;
+        font-size: 0.6rem;
+    }
+    .today{
+        padding-top: 32px !important;
+    }
+    .week-panel{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 549px){
+    .week-panel{
+        flex-wrap: wrap;
+    }
+    .weekday{
+        display: none;
+    }
+    .select{
+        display:block !important;
+    }
+}
+.today{
+    padding-top: 35px;
+}
+.select{
+    display: none;
+}
+
+/*SCHEDULE*/
+.schedule-group{
+    border: white;
+    border-width: 0.5px;
+    border-style: solid;
+    overflow-x:scroll;
+}
+.schedule{
+    color: #fff;
+    background-color: black;
+    width: 100%;
+    min-width: 450px;
+    text-align: center;
+}
+@media only screen and (max-width: 699px){
+    .schedule{
+        font-size: 12px;
+    }
+}
+.schedule td{
+    width: 100px;
+    height: 40px;
+}
