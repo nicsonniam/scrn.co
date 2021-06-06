@@ -1,0 +1,209 @@
+/*GLOBAL*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html * {
+    /* background-color: black; */
+    color: white;
+    font-family: 'Raleway', sans-serif !important;
+}
+header{
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: gray !important;
+    transition: 0.2s linear;
+}
+div{
+    background-color: black;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.maindiv, footer{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+@media only screen and (min-width: 3001px){
+    .maindiv, footer{
+        padding-left: 35%;
+        padding-right: 35%;
+    }
+}
+@media only screen and (min-width: 2001px) and (max-width: 3000px) {
+    .maindiv, footer{
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+}
+@media only screen and (min-width: 1701px) and (max-width: 2000px){
+    .maindiv, footer{
+        padding-left: 26%;
+        padding-right: 26%;
+    }
+}
+@media only screen and (min-width: 1371px) and (max-width: 1700px){
+    .maindiv, footer{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1370px){
+    .maindiv, footer{
+        padding-left: 16%;
+        padding-right: 16%;
+    }
+}
+@media only screen and (min-width: 1081px) and (max-width: 1200px){
+    .maindiv, footer{
+        padding-left: 13%;
+        padding-right: 13%;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1080px){
+    .maindiv, footer{
+        padding-left: 13%;
+        padding-right: 13%;
+    }
+}
+/*HEADER*/
+.navbar{
+    display: flex;
+    width: 800px;
+    margin: auto;
+}
+.navbar a{
+    padding-right: 15px;
+}
+.navbar a:hover{
+    color: gray !important;
+}
+.top-img{
+    text-align: center;
+}
+.navbar a{
+    padding: 10px;
+}
+hr.navbar-break{
+    border-top: #707070;
+    margin: 0;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 25px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.5px;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*FOOTER*/
+footer{
+    background-color: #171717;
+}
+footer div{
+    background-color: #171717;
+}
+.footer-div{
+    width: 100%;
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-email{
+    width: fit-content;
+    color: white;
+    text-align: right;
+}
+.address-openinghours{
+    color:white;
+    padding-left: 20px;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav a{
+    color: #878787 !important;
+}
+.footer-nav a:hover{
+    color: white !important;
+    transition: 0.2s linear;
+}
+
+
+/*POSTER CAROUSEL*/
+.poster-carousel-group{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.movie-poster-carousel{
+    width: 100%;
+    height: auto;
+}
+
+/*WEEK PANEL*/
+
+.week-panel{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+.week-panel-square{
+    color: white;
+    margin: 10px auto;
+    height: 100px;
+    width: 100px;
+    border: 0.5px;
+    border-style: solid;
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+.today{
+    padding-top: 35px;
+}
+
+/*SCHEDULE*/
+.schedule-group{
+    border: white;
+    border-width: 0.5px;
+    border-style: solid;
+}
+.schedule{
+    color: #fff;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+.schedule td{
+    width: 100px;
+    height: 40px;
+}
