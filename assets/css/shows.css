@@ -1,0 +1,28 @@
+.nowshowing{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.movielist{
+    border: 1px;
+    border-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+.moviecard{
+    height: 375px;
+    width: 250px;
+}
+.moviecard p:hover{
+    color: gray !important; 
+}
+.moviecard img{
+    padding-bottom: 5px;
+}
+.moviecard img:hover{
+    opacity: 0.75;
+}

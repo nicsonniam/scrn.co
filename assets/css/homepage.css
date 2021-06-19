@@ -1,14 +1,23 @@
 /*POSTER CAROUSEL*/
 .poster-carousel-group{
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;  
 }
 .movie-poster-carousel{
     width: 100%;
     height: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
 }
-
+#homepagetitle{
+    font-weight: 100;
+    font-size: 1.7rem;
+}
 /*WEEK PANEL*/
 
 .week-panel{
@@ -91,4 +100,7 @@
 .schedule td{
     width: 100px;
     height: 40px;
+}
+.schedule a{
+    cursor: pointer;
 }

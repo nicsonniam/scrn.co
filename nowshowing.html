@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/shows.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <title>SCRN.CO - NOW SHOWING</title>
+</head>
+<header>
+    <div class="fullsize">
+        <div class="top-img"> 
+            <a href="index.html"><img src="images/scrn-co.png" height="90" width="auto" alt=""></a>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <div class="dropdown">
+                        <a href="">FILMS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="nowshowing.html">NOW SHOWING</a>
+                            <a href="upcomingfilms.html">UPCOMING FILMS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="">REVIEWS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="">VIEW REVIEWS</a>
+                            <a href="">SUBMIT A REVIEW</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">EVENTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="">LOCATIONS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="">SCRN.CO</a>
+                            <a href="">SCRN.CO II</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">MEMBERSHIP & GIFTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+            </ul>
+        </nav>
+        <hr class="navbar-break">
+        <br>
+    </div>
+    <div class="mobile">
+        <div id="mobileTopNav" class="top-img-mobile"> 
+            <a href="index.html"><img src="images/scrn-co.png" height="90" width="auto" alt=""></a>
+            <button class="menu-button-mobile" onclick="openclosenav()"><img src="images/hamburger.svg" alt=""/>
+        </div>
+        <div id="mobileNavMenu" class="navmenu-mobile">
+            <div>
+                <ul>
+                    <li><a href="">FILMS</a></li>
+                    <li><a href="">REVIEWS</a></li>
+                    <li><a href="">EVENTS</a></li>
+                    <li><a href="">LOCATIONS</a></li>
+                    <li><a href="">MEMBERSHIP & GIFTS</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="menu-button-mobile" onclick="openclosenav()"><img src="images/close.svg" alt=""/>
+            </div>
+        </div>
+        <!-- <nav>
+            <ul class="navbar">
+                <li>
+                    <div class="dropdown">
+                        <a href="">FILMS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="">NOW SHOWING</a>
+                            <a href="">UPCOMING FILMS</a>
+                            <a class="gray" href="">LOCAL FILMS</a>
+                            <a class="gray" href="">FOREIGN FILMS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="">REVIEWS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="">SUBMIT A REVIEW</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">EVENTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="">LOCATIONS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="">SCRN.CO</a>
+                            <a href="">SCRN.CO II</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">MEMBERSHIP & GIFTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+            </ul>
+        </nav> -->
+        <!-- <hr class="navbar-break"> -->
+        <br>
+    </div> 
+</header>
+<body>
+    <div class="maindiv nowshowing">
+        <ul class="movielist">
+            <li class="moviecard">
+                <a href="">
+                    <img src="images/deliverymad.jpg" alt="" srcset="">
+                    <p>DELIVERYMAD</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href="">
+                    <img src="images/theway.jpg" alt="" srcset="">
+                    <p>THE WAY</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/meekscutoff.jpg" alt="" srcset="">
+                    <p>MEEK'S CUTOFF</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/themill&thecross.jpg" alt="" srcset="">
+                    <p>THE MILL & THE CROSS</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/thecutfire.jpg" alt="" srcset="">
+                    <p>THE FUTURE</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/firefliesinthegarden.jpg" alt="" srcset="">
+                    <p>FIREFLIES IN THE GARDEN</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/bellflower.jpg" alt="" srcset="">
+                    <p>BELLFLOWER</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/restless.jpg" alt="" srcset="">
+                    <p>RESTLESS</p>
+                </a>
+            </li>
+            <li class="moviecard">
+                <a href=""><img src="images/hesher.jpg" alt="" srcset="">
+                    <p>HESHER</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+<footer id="footer">
+    <div class="footer-div">
+        <img src="images/scrn-co.png" height="90"width="auto" alt="">
+        <br>
+        <br>
+        <div class="address-openinghours">
+            <b>SCRN.CO</b>
+            <br>
+            1002 Vutin Street, Drump Tower, Singapore 123321
+            <br><br>
+            <b>SCRN.CO II</b>
+            <br>
+            800 Tonald Avenue 3, Pladimir Building, Singapore 987789
+            <br><br>
+            <b>OPENING HOURS</b>
+            <br>
+            Mon - Fri: 3pm to 11pm | Sat/Sun/PH: 9am to 1am
+            <br><br>
+        </div>
+        <div>
+            <p class="footer-email">Email: ask@scrn.co</p>
+        </div>  
+    </div>
+    <ul class="footer-nav">
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">PARTNERS</a></li>
+        <li><a href="">CAREERS</a></li>
+        <li><a href="">CONTACT</a></li>
+        <li><a href="">TERMS OF SERVICE</a></li>
+        <li><a href="">PRIVACY POLICY</a></li>
+    </ul>
+    <br>
+</footer>
+</html>

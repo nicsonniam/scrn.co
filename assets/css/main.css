@@ -13,6 +13,9 @@ header{
     color: white;
     margin: 0;
 }
+p{
+    margin: 0;
+}
 a{
     color: white;
     text-decoration: none;
@@ -86,6 +89,28 @@ ul{
         padding-right: 3%;
     }
 }
+
+/*SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 /*HEADER*/
 /******************MOBILE**************** */
