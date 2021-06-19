@@ -14,10 +14,6 @@
     scroll-snap-align: start;
     scroll-behavior: smooth;
 }
-#homepagetitle{
-    font-weight: 100;
-    font-size: 1.7rem;
-}
 /*WEEK PANEL*/
 
 .week-panel{
