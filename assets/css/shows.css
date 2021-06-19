@@ -3,6 +3,10 @@
     padding-top: 10px;
     padding-bottom: 30px;
 }
+.showingpagetitle h1{
+    font-weight: 100;
+    font-size: 1.7rem;
+}
 @media only screen and (max-width:1338px) {
     .showingpagetitle{
         text-align: center;
