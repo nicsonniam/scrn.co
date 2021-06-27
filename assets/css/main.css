@@ -194,6 +194,13 @@ ul{
         display: none;
     }
 }
+@-moz-document url-prefix() {
+    .navbar{
+        display: flex;
+        width: 900px!important;
+        margin: auto;
+    }
+}
 .navbar{
     display: flex;
     width: 800px;

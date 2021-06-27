@@ -1,8 +1,6 @@
 /*POSTER CAROUSEL*/
 .poster-carousel-group{
     text-align: center;
-    /* padding-left: 10px;
-    padding-right: 10px; */
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;  
@@ -14,6 +12,12 @@
     scroll-snap-align: start;
     scroll-behavior: smooth;
 }
+@-moz-document url-prefix() {
+    .poster-carousel-group img:nth-child(n+2) { 
+      display: none;
+      overflow-x: hidden;
+    }
+  }
 /*WEEK PANEL*/
 
 .week-panel{
