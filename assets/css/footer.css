@@ -5,15 +5,37 @@
     flex-wrap:wrap;
     align-items: center;
 }
+@media only screen and (max-width:900px) {
+    .aboutus{
+        display: block !important;
+        width: 100%;
+    }
+    .aboutus div{
+        padding: 20px 0!important;
+    }
+    .aboutus div:nth-child(n+2){
+        width: 100% !important;
+    }
+    .aboutus h6{
+        margin: 0;
+    }
+    .aboutustxt{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .alignright{
+        text-align: left!important;
+    }
+}
 .ourstory{
-    margin: auto;
-    width: 50%;
+    width: 90%;
 }
 .aboutus div{
     width: 100%;
 }
 .aboutus div:nth-child(1){
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 .aboutus div:nth-child(n+2){
