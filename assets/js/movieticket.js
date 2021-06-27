@@ -22,6 +22,8 @@ function checkdate(){
     datediff = datediff/60;
     datediff = datediff/60;
     datediff = Math.round(datediff/24);
+    datediff++;
+    console.log(datediff);
     if(datediff<0){
         document.getElementById("dateerror").innerHTML = "Date cannot be before today!";
         setdatetoday();
@@ -70,7 +72,7 @@ function validate(){
             if(confirm(confirmMsg)){
                 confirmMsg = "Thank you "+email+". You have selected: "+movie+" on "+date+" and your seat selection is: "+seat+".";
                 alert(confirmMsg);
-                window.location.href = '../thescreen/index.html';
+                window.location.href = '/';
             }
         }
     }
