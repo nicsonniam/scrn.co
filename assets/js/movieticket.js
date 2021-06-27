@@ -72,7 +72,7 @@ function validate(){
             if(confirm(confirmMsg)){
                 confirmMsg = "Thank you "+email+". You have selected: "+movie+" on "+date+" and your seat selection is: "+seat+".";
                 alert(confirmMsg);
-                window.location.href = '/scrn.co/index.html';
+                window.location.href = '../scrn.co/index.html';
             }
         }
     }
