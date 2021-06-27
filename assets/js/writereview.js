@@ -20,14 +20,13 @@ function validate(){
         if(confirm(confirmMsg)){
             confirmMsg = "Thank you "+name+". Your review of "+movie+" has been submitted to us. We will process your review soon.";
             alert(confirmMsg);
-            window.location.href = '../thescreen/reviews.html';
+            window.location.href = '../scrn.co/reviews.html';
         }
     }
 }
 function wordcount(){
     let review = document.getElementById("review").value;
-    var count = review.split(' ').length -1;
-    console.log(count);
+    var count = review.split(' ').length;
     if(count==0){
         document.getElementById("wordcount").innerHTML = "Word limit: 1000";
         document.getElementById("reviewerror").innerHTML = "";
