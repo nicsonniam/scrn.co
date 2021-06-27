@@ -1,0 +1,34 @@
+/*ABOUT US*/
+.aboutus{
+    display: flex;
+    width:100%;
+    flex-wrap:wrap;
+    align-items: center;
+}
+.ourstory{
+    margin: auto;
+    width: 50%;
+}
+.aboutus div{
+    width: 100%;
+}
+.aboutus div:nth-child(1){
+    text-align: center;
+    width: 100%;
+}
+.aboutus div:nth-child(n+2){
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+}
+.aboutustxt{
+    width: 80%;
+    margin: auto;
+}
+.alignright{
+    text-align: right;
+}
+.alignleft{
+    text-align: left;
+}

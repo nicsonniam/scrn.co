@@ -1,6 +1,5 @@
 function getDates() {
     var today = new Date();
-    var leapYear = false;
     var months = [
         "JAN",
         "FEB",
@@ -19,6 +18,12 @@ function getDates() {
     var mm = today.getMonth();
     var yy = today.getFullYear;
     var month = months[mm];
+
+    today.setDate(today.getDate() + 1);
+    dd = String(today.getDate());
+    mm = today.getMonth();
+    yy = today.getFullYear;
+    month = months[mm];
     document.getElementById("1").innerHTML = dd;
     document.getElementById("1a").innerHTML = month;
 
@@ -45,6 +50,8 @@ function getDates() {
     month = months[mm];
     document.getElementById("4").innerHTML = dd;
     document.getElementById("4a").innerHTML = month;
+    document.getElementById("5").innerHTML = dd;
+    document.getElementById("5a").innerHTML = month;
 
     today.setDate(today.getDate() + 1);
     dd = String(today.getDate());

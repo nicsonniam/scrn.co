@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="scrn.ico"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/shows.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/writereview.js"></script>
+    <title>SCRN.CO - NOW SHOWING</title>
+</head>
+<header>
+    <div class="fullsize">
+        <div class="top-img"> 
+            <a href="index.html" onclick="return confirmNavigate();"><img src="images/scrn-co.png" height="90" width="auto" alt=""></a>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <div class="dropdown">
+                        <a href="nowshowing.html" nclick="return confirmNavigate();">FILMS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="nowshowing.html" onclick="return confirmNavigate();">NOW SHOWING</a>
+                            <a href="upcomingfilms.html" onclick="return confirmNavigate();">UPCOMING FILMS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="reviews.html onclick="return confirmNavigate();"">REVIEWS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="reviews.html" onclick="return confirmNavigate();">VIEW REVIEWS</a>
+                            <a href="writeareview.html" onclick="return confirmNavigate();">SUBMIT A REVIEW</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="comingsoon.html" onclick="return confirmNavigate();">EVENTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="comingsoon.html" onclick="return confirmNavigate();">LOCATIONS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="comingsoon.html" onclick="return confirmNavigate();">SCRN.CO</a>
+                            <a href="comingsoon.html" onclick="return confirmNavigate();">SCRN.CO II</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="comingsoon.html" onclick="return confirmNavigate();">MEMBERSHIP & GIFTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+                <li>
+                    <div class="search">
+                        <input type="text" placeholder="Search" name="search" id="search" class="searchbar">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <hr class="navbar-break">
+        <br>
+    </div>
+    <div class="mobile">
+        <div id="mobileTopNav" class="top-img-mobile"> 
+            <a href="index.html" onclick="return confirmNavigate();"><img src="images/scrn-co.png" height="90" width="auto" alt=""></a>
+            <button class="menu-button-mobile" onclick="openclosenav()"><img src="images/hamburger.svg" alt=""/>
+        </div>
+        <div id="mobileNavMenu" class="navmenu-mobile">
+            <div>
+                <ul>
+                    <li><a href="nowshowing.html" onclick="return confirmNavigate();">FILMS</a></li>
+                    <li><a href="reviews.html" onclick="return confirmNavigate();">REVIEWS</a></li>
+                    <li><a href="comingsoon.html" onclick="return confirmNavigate();">EVENTS</a></li>
+                    <li><a href="comingsoon.html" onclick="return confirmNavigate();">LOCATIONS</a></li>
+                    <li><a href="comingsoon.html" onclick="return confirmNavigate();">MEMBERSHIP & GIFTS</a></li>
+                    <li>
+                        <div class="search mob">
+                            <input type="text" placeholder="Search" name="search" id="search" class="searchbar">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <button class="menu-button-mobile" onclick="openclosenav()"><img src="images/close.svg" alt=""/>
+            </div>
+        </div>
+        <br>
+    </div>  
+</header>
+<body>
+    <div id="mainDiv" class="maindiv">
+        <div class="showingpagetitle">
+            <h1>SUBMIT A REVIEW</h1>
+            <br>
+            <a href="reviews.html" onclick="return confirmNavigate();">VIEW REVIEWS</a>
+        </div>
+        <div>
+            <form action="#" name="reviewform" class="buyticketform fullwidth">
+                <div style="padding-right: 40px;">
+                    <label for="name">NAME*</label>
+                    <br>
+                    <input name="name" id="name" type="text"/>
+                    <br>
+                    <span class="error" id="nameerror"></span>
+                    <br>
+                    <label for="moviedd">SELECT A MOVIE TO REVIEW*</label>
+                    <br>
+                    <select name="moviedd" id="moviedd" >
+                        <option value="DELIVERYMAD">DELIVERYMAD</option>
+                        <option value="THE WAY">THE WAY</option>
+                        <option value="MEEK'S CUTOFF">MEEK'S CUTOFF</option>
+                        <option value="THE MILL & THE CROSS">THE MILL & THE CROSS</option>
+                        <option value="THE FUTURE">THE FUTURE</option>
+                        <option value="FIREFLIES IN THE GARDEN">FIREFLIES IN THE GARDEN</option>
+                        <option value="BELLFLOWER">BELLFLOWER</option>
+                        <option value="RESTLESS">RESTLESS</option>
+                        <option value="HESHER">HESHER</option>
+                    </select>
+                    <br>
+                    <span class="error" id="movieerror"></span>
+                    <br>
+                    <label for="review">WRITE YOUR REVIEW* </label>
+                    <br>
+                    <textarea onchange="wordcount()" name="review" id="review" cols="30" rows="40"></textarea>
+                    <br>
+                    <span id="wordcount">Word limit: 1000</span>
+                    <br>
+                    <span class="error" id="reviewerror"></span>
+                    <br><br>
+                    <button type="button" class="reviewbutton" onclick="validate()">SUBMIT REVIEW</button>
+                </div>
+            </form>
+        </div>  
+        <br><br><br>
+    </div>
+    <footer id="footer">
+        <div class="footer-div">
+            <img src="images/scrn-co.png" height="90"width="auto" alt="">
+            <br>
+            <br>
+            <div class="address-openinghours">
+                <b>SCRN.CO</b>
+                <br>
+                1002 Vutin Street, Drump Tower, Singapore 123321
+                <br><br>
+                <b>SCRN.CO II</b>
+                <br>
+                800 Tonald Avenue 3, Pladimir Building, Singapore 987789
+                <br><br>
+                <b>OPENING HOURS</b>
+                <br>
+                Mon - Fri: 3pm to 11pm | Sat/Sun/PH: 9am to 1am
+                <br><br>
+            </div>
+            <div>
+                <p class="footer-email">Email: ask@scrn.co</p>
+            </div>  
+        </div>
+        <ul class="footer-nav">
+            <li><a href="footer/about.html" onclick="return confirmNavigate();">ABOUT</a></li>
+            <li><a href="footer/partners.html" onclick="return confirmNavigate();">PARTNERS</a></li>
+            <li><a href="footer/careers.html" onclick="return confirmNavigate();">CAREERS</a></li>
+            <li><a href="footer/contact.html" onclick="return confirmNavigate();">CONTACT</a></li>
+            <li><a href="footer/tos.html" onclick="return confirmNavigate();">TERMS OF SERVICE</a></li>
+            <li><a href="footer/pp.html" onclick="return confirmNavigate();">PRIVACY POLICY</a></li>
+        </ul>
+        <br>
+    </footer>
+</body>
+</html>

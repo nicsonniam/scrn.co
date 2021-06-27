@@ -43,3 +43,104 @@
 .moviecard img:hover{
     opacity: 0.75;
 }
+
+
+/*WRITE REVIEW*/
+.reviewform{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#review{
+    height: 300px;
+    resize: none;
+}
+.reviewbutton{
+    padding: 15px 30px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+.fullwidth * {
+    width: 100%!important;
+}
+#review{
+    background-color:black; 
+    border-radius: 4px;
+}
+#moviedd{
+    background-color: black;
+}
+
+/*BUY TICKET*/
+.buyticketdiv{
+    padding: 20px 0;
+}
+.buyticketform{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+    .buyticketform{
+        display: block;
+        width: 100%;
+    }
+    .buyticketform div:nth-child(1) {
+        padding-right: 0!important;
+    }
+    .buyticketform div:nth-child(1) *{
+        width: 100%!important;
+    }
+}
+.buyticketform div:nth-child(1){
+    flex: 45%;
+}
+.buyticketform div:nth-child(2){
+    flex: 55%;
+}
+.buyticketform div:nth-child(3){
+    flex: 100%;
+    text-align: center;
+    padding: 60px 0;
+}
+.buyticketform div:nth-child(3)>button{
+    padding: 15px 30px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+@media only screen and (max-width: 330px) {
+    .seatselector{
+        padding: 0!important;
+    }
+}
+.seatselector{
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    padding: 0 30px;
+}
+.seatselector ul{
+    display: flex;
+    flex-wrap: wrap
+}
+.seatselector ul>li{
+    padding: 5px;
+    flex: 1 0 12.5%;
+}
+.buyticketform input,select,option {
+    border-style: solid ;
+    border-width: 1px;
+    width: 80%;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+option{
+    color: white;
+}
+.error{
+    color: red;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

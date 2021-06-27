@@ -4,11 +4,17 @@
     font-weight: 100;
     font-size: 1.7rem;
 }
+::selection {
+    background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+background: #ffb7b7; /* Gecko Browsers */
+}
 html{
     background-color: black;
 }
 html * {
-    /* background-color: black; */
+    /* background-color: black !important; */
     color: white;
     font-family: 'Raleway', sans-serif !important;
 }
@@ -166,6 +172,21 @@ ul{
 .navmenu-mobile li{
     padding: 10px 0 10px 0;
     font-size: 18px;
+}
+.search{
+    padding-left: 15px;
+}
+.mob{
+    padding-left: 0px;
+}
+.searchbar{
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 4px;
+    -moz-appearance: none; 
+    border: 1px solid #eee;
 }
 /******************MOBILE**************** */
 @media only screen and (max-width: 810px){

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="scrn.ico"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/shows.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/movieticket.js"></script>
+    <title>SCRN.CO</title>
+</head>
+<header>
+    <div class="fullsize">
+        <div class="top-img"> 
+            <a href="index.html"><img src="images/scrn-co.png" height="90" width="auto" alt=""></a>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <div class="dropdown">
+                        <a href="nowshowing.html">FILMS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="nowshowing.html">NOW SHOWING</a>
+                            <a href="upcomingfilms.html">UPCOMING FILMS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="reviews.html">REVIEWS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="reviews.html">VIEW REVIEWS</a>
+                            <a href="writeareview.html">SUBMIT A REVIEW</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="comingsoon.html">EVENTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="comingsoon.html">LOCATIONS</a><img src="images/down-arrow.svg" height="6px" alt="">
+                        <div class="dropdown-content">
+                            <a href="comingsoon.html">SCRN.CO</a>
+                            <a href="comingsoon.html">SCRN.CO II</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="comingsoon.html">MEMBERSHIP & GIFTS</a><img src="images/down-arrow.svg" height="6px" alt=""></li>
+                <li>
+                    <div class="search">
+                        <input type="text" placeholder="Search" name="search" id="search" class="searchbar">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <hr class="navbar-break">
+        <br>
+    </div>
+    <div class="mobile">
+        <div id="mobileTopNav" class="top-img-mobile"> 
+            <a href="index.html"><img src="images/scrn-co.png" height="90" width="auto" alt=""></a>
+            <button class="menu-button-mobile" onclick="openclosenav()"><img src="images/hamburger.svg" alt=""/>
+        </div>
+        <div id="mobileNavMenu" class="navmenu-mobile">
+            <div>
+                <ul>
+                    <li><a href="nowshowing.html">FILMS</a></li>
+                    <li><a href="reviews.html">REVIEWS</a></li>
+                    <li><a href="comingsoon.html">EVENTS</a></li>
+                    <li><a href="comingsoon.html">LOCATIONS</a></li>
+                    <li><a href="comingsoon.html">MEMBERSHIP & GIFTS</a></li>
+                    <li>
+                        <div class="search mob">
+                            <input type="text" placeholder="Search" name="search" id="search" class="searchbar">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <button class="menu-button-mobile" onclick="openclosenav()"><img src="images/close.svg" alt=""/>
+            </div>
+        </div>
+        <br>
+    </div>  
+</header>
+<body onload="setdatetoday()">
+    <div id="mainDiv" class="maindiv">
+        <h1 id="pagetitle">BUY TICKETS</h1>
+        <div class="buyticketdiv">
+            <form action="#" name="ticketForm" class="buyticketform">
+                <div style="padding-right: 40px;">
+                    <label for="email">EMAIL*</label>
+                    <br>
+                    <input name="email" id="email" type="email" placeholder="email@email.com"/>
+                    <br>
+                    <span class="error" id="emailerror"></span>
+                    <br>
+                    <label for="moviedd">SELECT A MOVIE*</label>
+                    <br>
+                    <select name="moviedd" id="moviedd" >
+                        <option value="DELIVERYMAD">DELIVERYMAD</option>
+                        <option value="THE WAY">THE WAY</option>
+                        <option value="MEEK'S CUTOFF">MEEK'S CUTOFF</option>
+                        <option value="THE MILL & THE CROSS">THE MILL & THE CROSS</option>
+                        <option value="THE FUTURE">THE FUTURE</option>
+                        <option value="FIREFLIES IN THE GARDEN">FIREFLIES IN THE GARDEN</option>
+                        <option value="BELLFLOWER">BELLFLOWER</option>
+                        <option value="RESTLESS">RESTLESS</option>
+                        <option value="HESHER">HESHER</option>
+                    </select>
+                    <br>
+                    <span class="error" id="movieerror"></span>
+                    <br>
+                    <label for="moviedd">SELECT A DATE </label>
+                    <br>
+                    <input type="date" onchange="checkdate()" id="ticketdate" name="ticketdate">
+                    <br>
+                    <span class="error" id="dateerror"></span>
+                    <br><br>
+                </div>
+                <div class="seatselector">
+                    <br>
+                    <h4>SCREEN</h4>
+                    <br><br>
+                    <ul>
+                        <li><input type="radio" name="seatselection" value="A1" id="A1">A1</li>
+                        <li><input type="radio" name="seatselection" value="A2" id="A2">A2</li>
+                        <li><input type="radio" name="seatselection" value="A3" disabled="true" id="A3">A3</li>
+                        <li><input type="radio" name="seatselection" value="A4" disabled="true" id="A4">A4</li>
+                        <li><input type="radio" name="seatselection" value="A5" id="A5">A5</li>
+                        <li><input type="radio" name="seatselection" value="A6" id="A6">A6</li>
+                        <li><input type="radio" name="seatselection" value="A7" id="A7">A7</li>
+                        <li><input type="radio" name="seatselection" value="A8" id="A8">A8</li>
+                        <li><input type="radio" name="seatselection" value="B1" disabled="true" id="B1">B1</li>
+                        <li><input type="radio" name="seatselection" value="B2" disabled="true" id="B2">B2</li>
+                        <li><input type="radio" name="seatselection" value="B3" id="B3">B3</li>
+                        <li><input type="radio" name="seatselection" value="B4" id="B4">B4</li>
+                        <li><input type="radio" name="seatselection" value="B5" id="B5">B5</li>
+                        <li><input type="radio" name="seatselection" value="B6" id="B6">B6</li>
+                        <li><input type="radio" name="seatselection" value="B7" id="B7">B7</li>
+                        <li><input type="radio" name="seatselection" value="B8" id="B8">B8</li>
+                        <li><input type="radio" name="seatselection" value="C1" id="C1">C1</li>
+                        <li><input type="radio" name="seatselection" value="C2" id="C2">C2</li>
+                        <li><input type="radio" name="seatselection" value="C3" disabled="true" id="C3">C3</li>
+                        <li><input type="radio" name="seatselection" value="C4" id="C4">C4</li>
+                        <li><input type="radio" name="seatselection" value="C5" id="C5">C5</li>
+                        <li><input type="radio" name="seatselection" value="C6" id="C6">C6</li>
+                        <li><input type="radio" name="seatselection" value="C7" id="C7">C7</li>
+                        <li><input type="radio" name="seatselection" value="C8" id="C8">C8</li>
+                        <li><input type="radio" name="seatselection" value="D1" id="D1">D1</li>
+                        <li><input type="radio" name="seatselection" value="D2" id="D2">D2</li>
+                        <li><input type="radio" name="seatselection" value="D3" disabled="true" id="D3">D3</li>
+                        <li><input type="radio" name="seatselection" value="D4" disabled="true" id="D4">D4</li>
+                        <li><input type="radio" name="seatselection" value="D5" disabled="true" id="D5">D5</li>
+                        <li><input type="radio" name="seatselection" value="D6" id="D6">D6</li>
+                        <li><input type="radio" name="seatselection" value="D7" id="D7">D7</li>
+                        <li><input type="radio" name="seatselection" value="D8" id="D8">D8</li>
+                    </ul>
+                    <span class="error" id="seaterror"></span>
+                    <br><br><br>
+                </div>
+                <div class="buttondiv fullwidth">
+                    <button type="button" onclick="validate()">BUY TICKET</button>
+                </div>
+            </form>
+        </div>
+        <br><br><br>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-div">
+            <img src="images/scrn-co.png" height="90"width="auto" alt="">
+            <br>
+            <br>
+            <div class="address-openinghours">
+                <b>SCRN.CO</b>
+                <br>
+                1002 Vutin Street, Drump Tower, Singapore 123321
+                <br><br>
+                <b>SCRN.CO II</b>
+                <br>
+                800 Tonald Avenue 3, Pladimir Building, Singapore 987789
+                <br><br>
+                <b>OPENING HOURS</b>
+                <br>
+                Mon - Fri: 3pm to 11pm | Sat/Sun/PH: 9am to 1am
+                <br><br>
+            </div>
+            <div>
+                <p class="footer-email">Email: ask@scrn.co</p>
+            </div>  
+        </div>
+        <ul class="footer-nav">
+            <li><a href="footer/about.html">ABOUT</a></li>
+            <li><a href="footer/partners.html">PARTNERS</a></li>
+            <li><a href="footer/careers.html">CAREERS</a></li>
+            <li><a href="footer/contact.html">CONTACT</a></li>
+            <li><a href="footer/tos.html">TERMS OF SERVICE</a></li>
+            <li><a href="footer/pp.html">PRIVACY POLICY</a></li>
+        </ul>
+        <br>
+    </footer>
+</body>
+</html>
