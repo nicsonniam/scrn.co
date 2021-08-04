@@ -11,6 +11,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/movieticket.js"></script>
+    <link rel="manifest" href="/manifest.json">
     <title>SCRN.CO</title>
 </head>
 <header>
@@ -98,27 +99,25 @@
                     <br>
                     <span class="error" id="emailerror"></span>
                     <br>
+                    <label for="moviedd">SELECT A DATE </label>
+                    <br>
+                    <input type="date" onchange="checkdate()" id="ticketdate" name="ticketdate">
+                    <span class="error" id="dateerror"></span>
+                    <br><br>
+                    <label for="cinemasdd">SELECT A CINEMA*</label>
+                    <select name="cinemasdd" id="cinemasdd" onchange="movies()" >
+                    </select>
+                    <br><br>
                     <label for="moviedd">SELECT A MOVIE*</label>
                     <br>
-                    <select name="moviedd" id="moviedd" >
-                        <option value="DELIVERYMAD">DELIVERYMAD</option>
-                        <option value="THE WAY">THE WAY</option>
-                        <option value="MEEK'S CUTOFF">MEEK'S CUTOFF</option>
-                        <option value="THE MILL & THE CROSS">THE MILL & THE CROSS</option>
-                        <option value="THE FUTURE">THE FUTURE</option>
-                        <option value="FIREFLIES IN THE GARDEN">FIREFLIES IN THE GARDEN</option>
-                        <option value="BELLFLOWER">BELLFLOWER</option>
-                        <option value="RESTLESS">RESTLESS</option>
-                        <option value="HESHER">HESHER</option>
+                    <select name="moviedd" id="moviedd" onchange="showtimes()" >
                     </select>
                     <br>
                     <span class="error" id="movieerror"></span>
                     <br>
-                    <label for="moviedd">SELECT A DATE </label>
-                    <br>
-                    <input type="date" onchange="checkdate()" id="ticketdate" name="ticketdate">
-                    <br>
-                    <span class="error" id="dateerror"></span>
+                    <label for="showtimesdd">SELECT A SHOWTIME*</label>
+                    <select name="showtimesdd" id="showtimesdd" >
+                    </select>
                     <br><br>
                 </div>
                 <div class="seatselector">

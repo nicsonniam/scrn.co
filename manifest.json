@@ -1,0 +1,51 @@
+{
+    "name": "Scrn.co",
+    "short_name": "scrn.co",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/icon-72x45.png",
+            "type": "image/png",
+            "sizes": "72x45"
+        },
+        {
+            "src": "/images/icon-96x60.png",
+            "type": "image/png",
+            "sizes": "96x60"
+        },
+        {
+            "src": "/images/icon-128x81.png",
+            "type": "image/png",
+            "sizes": "128x81"
+        },
+        {
+            "src": "/images/icon-144x91.png",
+            "type": "image/png",
+            "sizes": "144x91"
+        },
+        {
+            "src": "/images/icon-152x96.png",
+            "type": "image/png",
+            "sizes": "152x96"
+        },
+        {
+            "src": "/images/icon-192x121.png",
+            "type": "image/png",
+            "sizes": "192x121"
+        },
+        {
+            "src": "/images/icon-384x243.png",
+            "type": "image/png",
+            "sizes": "384x243"
+        },
+        {
+            "src": "/images/icon-512x324.png",
+            "type": "image/png",
+            "sizes": "512x324"
+        }
+    ]
+}
