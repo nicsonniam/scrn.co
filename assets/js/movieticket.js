@@ -10,120 +10,6 @@ function setdatetoday(){
         day = '0' + day;
     }
     document.getElementById("ticketdate").value = [year, month, day].join('-');
-    document.getElementById("moviedd").disabled=true;
-    document.getElementById("showtimesdd").disabled=true;
-
-    var http1 = new XMLHttpRequest();
-    var cinemaEndPoint = 'https://nicsonniam.github.io/data/cinema-list.json';
-    
-    http1.onreadystatechange = function(){
-        if(http1.readyState == 4 && http1.status == 200){
-            var cinemas = JSON.parse(http1.response);
-            var select = document.getElementById("cinemasdd");
-            var el = document.createElement("option");
-            el.style.color = "white";
-            el.style.backgroundColor = "black";  
-            el.textContent = '----SELECT----';
-            el.value = '';
-            select.appendChild(el);
-            for(var i = 0; i < cinemas.length; i++) {
-                var el = document.createElement("option");
-                el.style.color = "white";
-                el.style.backgroundColor = "black";  
-                el.textContent = cinemas[i].name.toUpperCase();
-                el.value = cinemas[i].name;
-                select.appendChild(el);
-            }
-        }
-    };
-
-    http1.open("GET",cinemaEndPoint, true);
-    http1.send();
-}
-
-function movies(){
-    cleardd("showtimesdd");
-    cleardd("moviedd");
-    var http3 = new XMLHttpRequest();
-    var showtimeEndPoint = 'https://nicsonniam.github.io/data/cinema-showtime.json';
-    http3.onreadystatechange = function(){
-        if(http3.readyState == 4 && http3.status == 200){
-            var showtimes = JSON.parse(http3.response);
-            //console.log(showtimes)
-            var c = document.getElementById("cinemasdd");
-            var cinema = c.value;
-            document.getElementById("moviedd").disabled=false;
-            for(let key of Object.keys(showtimes)){
-                if(key==cinema){
-                    var select = document.getElementById("moviedd");
-                    for(let i=0; i<showtimes[key].length; i++){
-                        var el = document.createElement("option");
-                        el.style.color = "white";
-                        el.style.backgroundColor = "black";  
-                        el.textContent = showtimes[key][i].movie.toUpperCase();
-                        el.value = showtimes[key][i].movie;
-                        //console.log(el)
-                        select.appendChild(el);
-                    }
-                }
-            }
-        }
-    };
-    http3.open("GET",showtimeEndPoint, true);
-    http3.send();
-}
-
-function showtimes(){
-    var http3 = new XMLHttpRequest();
-    var showtimeEndPoint = 'https://nicsonniam.github.io/data/cinema-showtime.json';
-    http3.onreadystatechange = function(){
-        if(http3.readyState == 4 && http3.status == 200){
-            var showtimes = JSON.parse(http3.response);
-            //console.log(showtimes)
-            var m = document.getElementById("moviedd");
-            var movie = m.value;
-            var c = document.getElementById("cinemasdd");
-            var cinema = c.value;
-            document.getElementById("showtimesdd").disabled=false;
-            for(let key of Object.keys(showtimes)){
-                if(key==cinema){
-                    for(let i=0; i<showtimes[key].length; i++){
-                        if(showtimes[key][i].movie == movie){
-                            var select = document.getElementById("showtimesdd");
-                            for(let k=0; k<showtimes[key][i].showtimes.length; k++){
-                                var el = document.createElement("option");
-                                el.style.color = "white";
-                                el.style.backgroundColor = "black";  
-                                el.textContent = showtimes[key][i].showtimes[k];
-                                el.value = showtimes[key][i].showtimes[k];
-                                select.appendChild(el);
-                            }
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    };
-    http3.open("GET",showtimeEndPoint, true);
-    http3.send();
-}
-
-function cleardd(ddId){
-    var select = document.getElementById(ddId);
-    if(select){
-        var length = select.options.length;
-        length = select.options.length;
-        for (i = length-1; i >= 0; i--) {
-            select.options[i] = null;
-        }
-        var el = document.createElement("option");
-        el.style.color = "white";
-        el.style.backgroundColor = "black";  
-        el.textContent = '----SELECT----';
-        el.value = '';
-        select.appendChild(el);
-    }
 }
 
 function checkdate(){
@@ -137,6 +23,7 @@ function checkdate(){
     datediff = datediff/60;
     datediff = Math.round(datediff/24);
     datediff++;
+    console.log(datediff);
     if(datediff<0){
         document.getElementById("dateerror").innerHTML = "Date cannot be before today!";
         setdatetoday();
@@ -151,42 +38,6 @@ function checkdate(){
 }
 
 function validate(){
-    var http1 = new XMLHttpRequest();
-    var http2 = new XMLHttpRequest();
-    var http3 = new XMLHttpRequest();
-
-    var moviesEndPoint = 'https://nicsonniam.github.io/data/movie-list.json';
-    var showtimeEndPoint = 'https://nicsonniam.github.io/data/cinema-showtime.json';
-    var cinemaEndPoint = 'https://nicsonniam.github.io/data/cinema-list.json';
-    http1.onreadystatechange = function(){
-        if(http1.readyState == 4 && http1.status == 200){
-            var movies = JSON.parse(http1.response);
-            //console.log(movies);
-        }
-    };
-
-    http2.onreadystatechange = function(){
-        if(http2.readyState == 4 && http2.status == 200){
-            var cinemas = JSON.parse(http2.response);
-            //console.log(cinemas);
-        }
-    };
-
-    http3.onreadystatechange = function(){
-        if(http3.readyState == 4 && http3.status == 200){
-            var showtimes = JSON.parse(http3.response);
-            //console.log(showtimes);
-        }
-    };
-
-    http1.open("GET",moviesEndPoint, true);
-    http1.send();
-
-    http2.open("GET",cinemaEndPoint, true);
-    http2.send();
-
-    http3.open("GET",showtimeEndPoint, true);
-    http3.send();
     document.getElementById("emailerror").innerHTML = "";
     document.getElementById("movieerror").innerHTML = "";
     document.getElementById("dateerror").innerHTML = "";
